@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Player</title>
+</head>
+<body>
+<h1 id="status">Play</h1>
+<script>
+    function tooglePlay() {
+        var playButton = document.getElementsByClassName("play-button")[1];
+        if (playButton.className == "control-button spotify-play-pause-32")
+        {
+            playButton.className = "control-button spotify-play-pause-32";
+            playButton.innerHTML = "play";
+            document.getElementById("status").innerHTML = "Pause";
+        }
+        else {
+            playButton.className = "control-button spotify-pause-32";
+            playButton.innerHTML = "pause";
+            document.getElementById("status").innerHTML = "play";
+        }
+        else {
+            playButton.className = "control-button spotify-shuffle-32";
+            playButton.innerHTML = "shuffle";
+            document.getElementById("status").innerHTML = "shuffle";
+        }
+        else {
+            playButton.classsName = "control-button spotify-repeat-32";
+            playButton.innerHTML = "repeat";
+            document.getElementById("status").innerHTML = "repeat";
+        }
+    }
+    function next() {
+        document.getElementById("status").innerHTML = "Next to the selected queue.";
+    }
+    function previous() {
+        document.getElementById("status").innerHTML = "Previous to the selected queue.";
+    }
+    function shuffle() {
+        document.getElementById("status").innerHTML = "Shuffling selected song.";
+    }
+    function repeat() {
+        document.getElementById("status").innerHTML = "Repeating selected song.";
+    }
+</script>
+</body>
+<footer>
+    <button class="control-button spotify-skip-back-24" onclick="previous()">Previous</button>
+    <button class="control-button spotify-pause-32" onclick="togglePlay()">Pause</button>
+    <button class="control-button spotify-skip-forward-24" onclick="next()">Next</button>
+    <button class="control-button spotify-shuffle-32" onClick="next()">Next</button>
+    <button class="control-button spotify-repeat-32" onClick="next()">Next</button>
+</footer>
+</html>

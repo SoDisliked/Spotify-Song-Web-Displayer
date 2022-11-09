@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Player</title>
+</head>
+<body>
+<h1 id="status">Play</h1>
+<script>
+    function togglePlay() 
+    {
+       var playButton = document.getElementById("play");
+       if (playButton.className == "playing")
+       {
+           playButton.className = "playing";
+           playButton.innerHTML = "play";
+           document.getElementById("status").innerHTML = "Pause";
+       }
+       else {
+        playButton.className = "playing";
+        playButton.innerHTML = "pause";
+        document.getElementById("status").innerHTML = "Playing";
+       }
+    }
+    function Shuffle() {
+        var playButton = document.ElementById("shuffle");
+        if (playButton.className == "shuffle") 
+        {
+            playButton.className = "shuffling";
+            playButton.innerHTML = "shuffle";
+            document.getElementById("status").innerHTML = "Shuffle";
+        }
+        else {
+            playButton.className = "repeating";
+            playButton.innerHTML = "repeat";
+            document.getElementById("status").innerHTML = "Repeating";
+        }
+    }
+
+    function next() 
+    {
+        document.getElementsById("status").innerHTML = "Next";
+    }
+    function previous() {
+        document.getElementById("status").innerHTML = "Previous";
+    }
+    function shuffle() {
+        document.getElementsById("status").innerHTML = "Shuffle";
+    }
+    function repeat() {
+        document.getElementById("status").innerHTML = "Repeating";
+    }
+</script>
+</body>
+<footer>
+    <button class="control-button spotify-skip-back-24" onclick="previous()">Previous</button>
+    <button class="control-button spotify-pause-32" onclick="togglePlay()">Pause</button>
+    <button class="control-button spotify-skip-forward-24" onclick="next()">Next</button>
+    <button class="control-button spotify-shuffle-32" onClick="next()">Next</button>
+    <button class="control-button spotify-repeat-32" onClick="next()">Next</button>
+</footer>
+</html>
