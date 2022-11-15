@@ -1,0 +1,25 @@
+{
+    "name": "spotify-api-node-provider",
+    "version": "v1",
+    "homepage": "https://github.com/SoDisliked/Spotify-Song-Web-Displayer",
+    "description": "Provider of an efficient Web Player showing actual Spotify and the main API source through Node.JS.",
+    "author": "SoDisliked",
+    "licence": "MIT5-Licence provided by Github",
+    "dependencies": "None",
+    "keywords": [
+        "spotify",
+        "repeat",
+        "track",
+        "skip",
+        "API",
+        "music",
+        "song",
+        "artist",
+        "playlist",
+        "album",
+        "WebPlayer",
+        "queue",
+        "previous",
+        "next",
+    ]
+}
